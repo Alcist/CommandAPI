@@ -2,20 +2,17 @@ package com.alcist.commandapi;
 
 import java.util.*;
 
-import com.alcist.anvilcraft.account.Plugin;
-import com.alcist.anvilcraft.account.permissions.Permissions;
 import org.apache.commons.cli.*;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public abstract class CommandHandler extends Command implements CommandExecutor {
 
     private final Map<Option, SubCommand> commands;
     private final Options options;
-    private final Permissions permissions;
 
-    public CommandHandler(Plugin plugin) {
-        this.permissions = new Permissions();
+    public CommandHandler(JavaPlugin plugin) {
         this.options = new Options();
         this.commands = new HashMap<>();
         registerCommands();

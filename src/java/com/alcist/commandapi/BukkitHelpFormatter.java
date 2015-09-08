@@ -1,6 +1,5 @@
 package com.alcist.commandapi;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode;
 import org.apache.commons.cli.Options;
 import org.bukkit.command.CommandSender;
 
