@@ -13,6 +13,7 @@ public abstract class CommandHandler extends Command implements CommandExecutor 
     private final Options options;
 
     public CommandHandler(JavaPlugin plugin) {
+        super();
         this.options = new Options();
         this.commands = new HashMap<>();
         registerCommands();
